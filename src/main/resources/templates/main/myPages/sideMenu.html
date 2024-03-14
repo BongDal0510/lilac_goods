@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+    <th:block th:fragment="side">
+        <div class="container-fluid contact py-6 row">
+            <div class="container col-lg-2 side-nav">
+                <div class="p-2 bg-light rounded contact-form">
+                    <h3 class = "text-primary fw-bold text-center my-4" >My page</h3>
+                    <ul class="no_dot">
+                        <li>
+                            <a th:href="@{/mypage/info}" class="">내정보</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/mypage/product}" class="">결제 내역</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/mypage/testimonial}" class="">나의 후기</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/mypage/modify}" class="">개인 정보 수정</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/mypage/logout}" class="">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </th:block>
+</body>
+</html>

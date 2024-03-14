@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:replace="main/headerFooter/headSetting :: headSetting"></th:block>
+<body>
+<th:block th:replace="main/headerFooter/header :: header"></th:block>
+
+<!-- Contact Start -->
+<div class="container-fluid contact py-6">
+    <div class="container">
+        <div class="p-5 bg-light rounded contact-form">
+            <div class="row g-4">
+                <div class="col-12">
+                    <h1 class="display-5 mb-0">Writing reviews</h1>
+                </div>
+                <div class="col-md-6 col-lg-12">
+                    <form>
+                        <select name="type" class="w-50 form-control p-3 mb-4 border-primary bg-light">
+                            <option value="">구매 상품 선택</option>
+                            <option value="tcw">1</option>
+                            <option value="t">2</option>
+                            <option value="c">3</option>
+                        </select>
+                        <select name="type" class="w-25 form-control p-3 mb-4 border-primary bg-light">
+                            <option value="csatFv">★★★★★</option>
+                            <option value="csatFr">★★★★</option>
+                            <option value="csatThr">★★★</option>
+                            <option value="csatTw">★★</option>
+                            <option value="csatOne">★</option>
+                        </select>
+                        <input type="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="이미지 첨부">
+                        <textarea class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="후기 작성"></textarea>
+                        <div class="text-center">
+                            <button class="btn btn-primary py-3 px-5 rounded-pill" type="submit">Submit Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+
+<!-- Blog End -->
+<th:block th:replace="main/headerFooter/footer :: footer"></th:block>
+</body>
+</html>

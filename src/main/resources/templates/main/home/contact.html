@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/html">
+
+<th:block th:replace="main/headerFooter/headSetting :: headSetting"></th:block>
+
+<body>
+
+<th:block th:replace="main/headerFooter/header :: header"></th:block>
+
+<div class="container-fluid bg-light py-6 mt-0">
+    <div class="container">
+        <h1 class="display-1"><span class="text-primary">Frequently Asked Questions</span></h1>
+    </div>
+    <div class="container py-4 my-6 mt-0">
+        <div class="owl-theme testimonial-carousel mb-4">
+            <div class="faq_list">
+                <ul>
+                    <li class="article py-3" style="border-top:0">
+                        <div class="question pb-2">
+                            <i class="fas fa-search"></i>
+                            <a href="javascript:void(0);">
+                                신규회원 가입은 어떻게 하나요?
+                            </a>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                회원가입은 무료이며 화면 상단의 '회원가입'을 클릭하신 후 기본적인 인적사항만 기재하시면 간단하게 가입이 가능합니다.</br>
+                                기재하신 모든 정보는 철저하게 보호되며 당사 직원을 사칭하여 어느 누구도 회원님께 정보를 요청할 수 없습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="article py-3">
+                        <div class="question pb-2">
+                            <i class="fas fa-search"></i>
+                            <a href="javascript:void(0);">
+                                비회원도 쇼핑몰을 이용할수 있나요?
+                            </a>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                비회원 고객님의 경우 저희 라일락 굿즈의 상품을 보실수는 있으시나, 상품 구매는 어럽습니다.</br>
+                                반드시 회원가입 후 이용바랍니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="article py-3">
+                        <div class="question pb-2">
+                            <i class="fas fa-search"></i>
+                            <a href="javascript:void(0);">
+                                회원정보를 변경하려면 어떻게 해야 하나요?
+                            </a>
+                        </div>
+                        <div class="answer" id="a2">
+                            <p>
+                                고객님의 회원정보를 바꾸시려면 로그린 후, 화면 상단에 있는 '마이페이지'를 클릭하신 다음 '개인정보 수정' 메뉴에서 원하시는 부분을 변경하실 수 있습니다.</br>
+                                <span class="text-red">
+                                    단, 아이디는 변경이 불가능합니다.</br>
+                                    정확한 배송을 위해 주소 및 연락처가 바뀌었을 경우 반드시 정보변경을 통해 수정해 주시기 바랍니다.
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="article py-3">
+                        <div class="question pb-2">
+                            <i class="fas fa-search"></i>
+                            <a href="javascript:void(0);">
+                                ID나 비밀번호를 잊었는데 어떻게 해야 하나요?
+                            </a>
+                        </div>
+                        <div class="answer" id="a3">
+                            <p>
+                                화면 상단의 '로그인' 버튼을 누르신 후 회원 ID는 아이디찾기로 이름과 이메일를 입력하시면 바로 확인 가능하며, </br>
+                                비밀번호는 새 비밀번호 설정을 통해 ID와 이름,이메일를 입력하시면 새 비밀번호로 변경이 가능합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="article py-3">
+                        <div class="question pb-2">
+                            <i class="fas fa-search"></i>
+                            <a href="javascript:void(0);">
+                                회원탈퇴는 어떻게 하나요?
+                            </a>
+                        </div>
+                        <div class="answer" id="a4">
+                            <p>
+                                로그인 후, 화면 상단에 있는 '마이페이지'를 클릭하신 다음 '회원탈퇴' 메뉴에서 신청하실 수 있습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 페이징 //-->
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="main/headerFooter/footer :: footer"></th:block>
+</body>
+
+</html>
