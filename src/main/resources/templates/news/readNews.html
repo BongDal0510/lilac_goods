@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:replace="headerFooter/headSetting :: headSetting"></th:block>
+<body>
+<th:block th:replace="headerFooter/header :: header"></th:block>
+
+    <div id="main">
+        <div class="wrapper">
+            <div class="inner">
+
+                <!-- Elements -->
+                <header class="major">
+                    <h1>news</h1>
+                    <p>게시글 상세보기</p>
+                </header>
+                <!-- Table -->
+                <h3><a class="list button small" th:href="@{/news/list}">목록 보기</a></h3>
+                <div class="content">
+                    <div class="form" th:object="${newsVO}">
+                        <form th:action="@{/news/remove(newsId=*{newsId})}" method="get">
+                            <div class="fields">
+                                <div class="field">
+                                    <h4>번호</h4>
+                                    <input type="text" th:field="*{newsId}" readonly/>
+                                </div>
+                                <div class="field">
+                                    <h4>제목</h4>
+                                    <input type="text" th:field="*{newsTitle}" readonly/>
+                                </div>
+                                <div class="field">
+                                    <h4>내용</h4>
+                                    <textarea rows="6" style="resize:none" th:field="*{newsContent}" readonly></textarea>
+                                </div>
+                                <div class="field">
+                                    <h4>작성자</h4>
+                                    <input type="text" th:field="*{newsWriter}" readonly/>
+                                </div>
+                                <!--                            <div class="field">-->
+                                <!--                                <h4>첨부파일</h4>-->
+                                <!--                                <div class="uploadResult">-->
+                                <!--                                    <ul>-->
+                                <!--                                    </ul>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                            </div>
+                            <ul class="actions special">
+                                <li>
+                                    <input type="button" class="button" value="수정" onclick="modify()"/>
+                                    <input type="submit" class="button" value="삭제"/>
+                                </li>
+                            </ul>
+                            <ul class="icons">
+                                <li style="display: block">
+                                    <span class="icon solid fa-envelope"></span>
+                                    <strong>댓글</strong>
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="register button primary small" style="width: 100%">댓글 등록</a>
+                            <div style="display: none" class="register-form">
+                                <div>
+                                    <h4>작성자</h4>
+                                    <input type="text" name="replyWriter" placeholder="Replier">
+                                </div>
+                                <div>
+                                    <h4>댓글</h4>
+                                    <textarea rows="6" name="replyContent" placeholder="Reply" style="resize: none"></textarea>
+                                </div>
+                                <div style="text-align: right">
+                                    <a href="javascript:void(0)" class="finish button primary small">등록</a>
+                                    <a href="javascript:void(0)" class="cancel button primary small">취소</a>
+                                </div>
+                            </div>
+                            <ul class="replies"></ul>
+                        </form>
+                        <div class="paging" style="text-align: center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <th:block th:replace="headerFooter/footer :: footer"></th:block>
+    <th:block th:replace="headerFooter/js :: js"></th:block>
+<script th:inline="javascript">
+    let newsId= [[${newsVO.newsId}]];
+    function modify(){
+        location.href="/news/modify?newsId="+newsId
+    }
+</script>
+</body>
+</html>

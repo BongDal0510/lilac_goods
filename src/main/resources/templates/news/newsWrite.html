@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:replace="headerFooter/headSetting :: headSetting"></th:block>
+<body>
+<th:block th:replace="headerFooter/header :: header"></th:block>
+<!-- Main -->
+<div id="main">
+    <div class="wrapper">
+        <div class="inner">
+            <!-- Elements -->
+            <header class="major">
+                <h1>news</h1>
+                <p>게시글 등록</p>
+            </header>
+            <!-- Table -->
+            <h3><a class="list button small" th:href="@{/news/list}">목록 보기</a></h3>
+            <div class="content">
+                <div class="form">
+                    <form th:action="@{/news/write}" method="post" id="writeForm" th:object="${newsVO}">
+                        <div class="fields">
+                            <div class="field">
+                                <h4>제목</h4>
+                                <input placeholder="Title" type="text" th:field="*{newsTitle}"/>
+                            </div>
+                            <div class="field">
+                                <h4>내용</h4>
+                                <textarea rows="6" placeholder="Content" style="resize:none" th:field="*{newsContent}"></textarea>
+                            </div>
+                            <div class="field">
+                                <h4>작성자</h4>
+                                <input placeholder="Writer" type="text" th:field="*{newsWriter}"/>
+                            </div>
+<!--                            <div class="field">-->
+<!--                                <h4>첨부파일</h4>-->
+<!--                                <input type="file" name="upload" multiple>-->
+<!--                            </div>-->
+<!--                            <div class="field">-->
+<!--                                <div class="uploadResult">-->
+<!--                                    <ul></ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                        <ul class="actions special">
+                            <li><input type="submit" class="button" value="등록" /></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block th:replace="headerFooter/footer :: footer"></th:block>
+<th:block th:replace="headerFooter/js :: js"></th:block>
+</body>
+</html>

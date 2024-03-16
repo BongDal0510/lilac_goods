@@ -2,7 +2,8 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.lettering.lilac_goods.domain.vo.TestimonialVO" alias="TestimonialVO"></typeAlias>
-        <typeAlias type="com.lettering.lilac_goods.domain.vo.UserVO" alias="UserVO"></typeAlias>
+        <typeAlias type="com.lettering.lilac_goods.domain.vo.TestimonialVO" alias="TestimonialVO"/>
+        <typeAlias type="com.lettering.lilac_goods.domain.vo.UserVO" alias="UserVO"/>
+        <typeAlias type="com.lettering.lilac_goods.domain.vo.NewsVO" alias="NewsVO"/>
     </typeAliases>
 </configuration>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/html">
+<th:block th:replace="headerFooter/headSetting :: headSetting"></th:block>
+<body>
+<th:block th:replace="headerFooter/header :: header"></th:block>
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row justify-content-center pb-5 nav-tabs">
+            <div class="col-lg-5 event-img position-relative">
+                <div class="img-square">
+                    <img th:src="@{/img/art4.jpg}" class="img-fluid rounded img-inner" alt="">
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                <div class="pb-3 nav-tabs mb-4">
+                    <h1 class="JeonjuCraftGoR pt-3 pb-2">100일 기념 케이크 토퍼</h1>
+                    <h3 class="NPSfontBold text-primary" data-selector="prodNm">2.5$</h3>
+                </div>
+                <div class="option_wrap pb-4 nav-tabs mb-4">
+                    <span>배송 안내</br></span>
+                    <span class="option_data">결제완료 후 영업일 기준 15일 이내 배송</span>
+                </div>
+                <div class="">
+                    <div id="goods_wrap" class="goods_wrap">
+                        <div class="goods_select" id="prod_options">
+                            <div class="p-2">
+                                <div class="option_title pb-1 text-12 text-bold padding-bottom-xl">메인 색상 선택 <span class="text-red">*</span></div>
+                                <select name="type" class="w-100 p-1  border-primary bg-light text-center text-body d-xxl-inline-block">
+                                    <option value="">[필수] 색상을 선택해 주세요</option>
+                                    <option value="Black">검정(Black)</option>
+                                    <option value="Gray">회색(Gray)</option>
+                                    <option value="White">흰색(White)</option>
+                                    <option value="Beige">베이지(Beige)</option>
+                                    <option value="Brown">갈색(Brown)</option>
+                                    <option value="Red">빨강(Red)</option>
+                                    <option value="Carrot-Orange">주황-당근(Carrot Orange)</option>
+                                    <option value="Light-Orange">주황-형광(Light Orange)</option>
+                                    <option value="Yellow">노랑(Yellow)</option>
+                                    <option value="Light-Yellow">연노랑(Light Yellow)</option>
+                                    <option value="Grass-Green">잔디녹색(Grass Green)</option>
+                                    <option value="Spring-Green">봄녹색(Spring Green)</option>
+                                    <option value="Light-Emerald">연에메랄드(Light Emerald)</option>
+                                    <option value="Powder-Blue">파우더 파랑(Powder Blue)</option>
+                                    <option value="Sky-Blue">하늘색(Sky Blue)</option>
+                                    <option value="Lilac">연보라(Lilac)</option>
+                                    <option value="Purple">보라(Purple)</option>
+                                    <option value="Dark-Purple">진보라(Dark Purple)</option>
+                                    <option value="Blue">파랑(Blue)</option>
+                                    <option value="Aqua-Blue">청파랑(Aqua Blue)</option>
+                                    <option value="Deep-Pink">진분홍(Deep Pink)</option>
+                                    <option value="Pink">분홍(Pink)</option>
+                                    <option value="Flower-Pink">꽃분홍(Flower Pink)</option>
+                                    <option value="Light-Pink">연분홍(Light Pink)</option>
+                                    <option value="Baby-Pink">베이비 분홍(Baby Pink)</option>
+                                    <option value="Unicon">유니콘(Unicon)</option>
+                                </select>
+                            </div>
+                            <div class="p-2">
+                                <div class="option_title pb-1 text-12 text-bold padding-bottom-xl">보조 색상 선택<span class="text-red">*</span></div>
+                                <select name="type"
+                                        class="w-100 p-1  border-primary bg-light text-center text-body d-xxl-inline-block">
+                                    <!-- label for값이랑 select id값은 항상 매칭 -->
+                                    <option value="">[필수] 색상을 선택해 주세요</option>
+                                    <option value="1">남자</option>
+                                    <option value="2">여자</option>
+                                    <option value="3">()</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center pt-5">
+                        <button class="btn">주문하기<i
+                                class="fas fa-arrow-right ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center py-5">
+            <img th:src="@{/img/lilac-goods-color.JPG}">
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+<th:block th:replace="headerFooter/footer :: footer"></th:block>
+<th:block th:replace="headerFooter/js :: js"></th:block>
+</body>
+</html>
